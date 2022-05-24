@@ -1,42 +1,49 @@
 import 'dart:io';
 
 import 'courseServiceImp.dart';
-bool _next=true;
+
 void main(List<String> args){
-  var courseService=CourseServiceImp();
-            courseService.language();
-         print("1 ->   Barcha kurslar   2 -> Siz tanlagan kurs  3 -> qiymatni bilish ");
-          // while(_next){
+  var start=Started();
+  start.startFuture().whenComplete((){
+    var courseService=CourseServiceImp();
+    courseService.theEnd(); 
+  });       
+}
+
+class Started{
+ static int next=1;
+Future startFuture() async{
+ var courseService=CourseServiceImp();
+        await  courseService.languageChange();
+        do{
+    await  courseService.access();
         int kir=int.parse(stdin.readLineSync()!);
         switch (kir){
             case 1:
-                courseService.allCourses();
-                
+            courseService.allCourses();
               break;
             case 2:
-                courseService.getMyCourse(); 
-              // kir=int.parse(stdin.readLineSync()!);
+            courseService.getMyCourse(); 
+             
                break;
             case 3:
-                courseService.eveluate(); 
-              // kir=int.parse(stdin.readLineSync()!);
+             courseService.eveluate(); 
                break;
-            default: 
-             print("🤗🤗🤗  < --- E'tiboringiz uchun tashakkur! ---> 🤗🤗🤗");
-            // _next=false;
-            break;
-        //}
-     }
-           
+            case 4:
+             courseService.differenceCourse(); 
+               break;  
+            case 5:
+              courseService.valueCourse(); 
+               break; 
+            case 6: 
+                next=0;
+               break;
+            case 7:
+                next=1; 
+               break; 
+      } 
+        }while(next==1);            
 }
 
- nextFunc(){
-   print("yana foydalnasizmi : 1) HA  2) Yo'q");
-   int s=int.parse(stdin.readLineSync()!);
-   if(s==1){
-     _next=true;
-   }else{
-     _next=false;
-     print("E'tiboringiz uchun tashakkur!");
-   }
- }
+}
+

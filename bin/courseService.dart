@@ -1,10 +1,14 @@
 class CourseService{
     
-    Future allCourses () async{}
+    void allCourses () {}
 
-    Future getMyCourse() async{}
+    void getMyCourse() {}
 
-    Future eveluate() async{}
+    void eveluate() {}
 
-    Future language() async{}
+    void differenceCourse() {}
+
+    void valueCourse() {}
+
+    Future languageChange() async{}
 }
