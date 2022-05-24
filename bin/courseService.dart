@@ -1,10 +1,10 @@
 class CourseService{
     
-    void allCourses(){}
+    Future allCourses () async{}
 
-    void getMyCourse(){}
+    Future getMyCourse() async{}
 
-    void eveluate(){}
+    Future eveluate() async{}
 
-    void language(){}
+    Future language() async{}
 }

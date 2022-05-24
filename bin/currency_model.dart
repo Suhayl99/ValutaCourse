@@ -67,21 +67,21 @@ class CurrencyModel {
 
 @override
 toString(){
-  return "$id $ccy $ccyNmRu/$ccyNmUz/$ccyNmEn $nominal $ccy --- $rate  so'm";
+  return "$ccy 🔜 $ccyNmRu/$ccyNmUz/$ccyNmEn $nominal $ccy ➖ $rate  so'm";
 }
 
 toStringUzbek(){
-  return "$id ->  $ccy  [$ccyNmUz]  --- $rate  so'm  {$diff }";
+  return "🟢 $ccy -> [$ccyNmUz 🇺🇿 ]  ➖ $rate so'm 🔜 {$diff }";
 }
 toStringUzbekirill(){
-  return "$id ->  $ccy  [$ccyNmUzc] --- $rate so'm  {$diff }";
+  return "⚪️ $ccy -> [$ccyNmUzc 🏳️ ] ➖ $rate so'm 🔜 {$diff }";
 }
 
 toStringRus(){
-  return "$id ->  $ccy  [$ccyNmRu]  --- $rate  so'm  {$diff }";
+  return "🔴 $ccy -> [$ccyNmRu 🇷🇺 ]  ➖ $rate so'm 🔜 {$diff }";
 }
 toStringEnglish(){
-  return "$id ->  $ccy  [$ccyNmEn]  --- $rate  so'm  {$diff }";
+  return "🟠 $ccy -> [$ccyNmEn 🇬🇧 ]  ➖ $rate so'm 🔜 {$diff }";
 }
 
 }
