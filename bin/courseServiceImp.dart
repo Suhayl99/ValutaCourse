@@ -272,7 +272,7 @@ print('''     ==============================================================
       break;
       case 4: 
               print("--------------------------------------------------------------");
-              print("| ${item.ccyNmEn} 📙|    ${item.ccy}     | ${(sum/i).toStringAsFixed(2)} $valuta1|");
+              print("| ${item.ccyNmUzc} 📙|    ${item.ccy}     | ${(sum/i).toStringAsFixed(2)} $valuta1|");
               print("---------------------------------------------------------------");
       break;
     }
