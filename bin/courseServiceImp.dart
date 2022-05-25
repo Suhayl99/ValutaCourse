@@ -89,7 +89,6 @@ class CourseServiceImp implements CourseService{
 Future languageChange() async{
      getCourse().then((value){
  print("\n 🔁 🏦 Milliy Bank 🏦 🔁\n");
-  print("${value[0].date} 👇\n");
   print('🇺🇸 1 USD = 🇺🇿 ${value[0].rate} UZS');
   print('🇪🇺 1 EUR = 🇺🇿 ${value[1].rate} UZS');
   print('🇷🇺 1 RUB = 🇺🇿 ${value[2].rate} UZS');
